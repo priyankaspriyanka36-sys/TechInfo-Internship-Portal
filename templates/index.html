@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TECHINFO INTERNSHIP APPLICATION PORTAL</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>TECHINFO INTERNSHIP APPLICATION PORTAL</h1>
+
+    <p>Apply for Internship Opportunities</p>
+
+</header>
+
+<div class="container">
+
+{% if message %}
+<div class="success">
+
+{{ message }}
+
+</div>
+{% endif %}
+
+<form action="/submit"
+      method="POST"
+      enctype="multipart/form-data">
+
+<h2>Personal Information</h2>
+
+<label>Full Name</label>
+
+<input
+type="text"
+name="fullname"
+placeholder="Enter Full Name"
+required>
+
+<label>Email Address</label>
+
+<input
+type="email"
+name="email"
+placeholder="Enter Email Address"
+required>
+
+<label>Phone Number</label>
+
+<input
+type="text"
+name="phone"
+placeholder="Enter Phone Number"
+required>
+
+<label>College Name</label>
+
+<input
+type="text"
+name="college"
+placeholder="Enter College Name"
+required>
+
+<h2>Academic Information</h2>
+
+<label>Course</label>
+
+<select name="course" required>
+
+<option value="">Select Course</option>
+
+<option>BCA</option>
+
+<option>B.Sc</option>
+
+<option>B.Com</option>
+
+<option>BBA</option>
+
+<option>BE</option>
+
+<option>B.Tech</option>
+
+<option>MCA</option>
+
+<option>M.Sc</option>
+
+<option>MBA</option>
+
+</select>
+
+<label>Year</label>
+
+<select name="year" required>
+
+<option value="">Select Year</option>
+
+<option>1st Year</option>
+
+<option>2nd Year</option>
+
+<option>3rd Year</option>
+
+<option>4th Year</option>
+
+</select>
+
+<label>Semester</label>
+
+<select name="semester" required>
+
+<option value="">Select Semester</option>
+
+<option>1st Semester</option>
+
+<option>2nd Semester</option>
+
+<option>3rd Semester</option>
+
+<option>4th Semester</option>
+
+<option>5th Semester</option>
+
+<option>6th Semester</option>
+
+<option>7th Semester</option>
+
+<option>8th Semester</option>
+
+</select>
+
+<label>Skills</label>
+
+<select name="skills" required>
+
+<option value="">Select Skill</option>
+
+<option>Python</option>
+
+<option>Java</option>
+
+<option>C</option>
+
+<option>C++</option>
+
+<option>HTML</option>
+
+<option>CSS</option>
+
+<option>JavaScript</option>
+
+<option>PHP</option>
+
+<option>SQL</option>
+
+<option>React</option>
+
+<option>Flask</option>
+
+<option>Django</option>
+
+<option>Machine Learning</option>
+
+<option>Data Analytics</option>
+
+<option>Cyber Security</option>
+
+</select>
+
+<h2>Resume</h2>
+
+<label>Upload Resume (Optional)</label>
+
+<input
+type="file"
+name="resume"
+accept=".pdf,.doc,.docx">
+
+<div class="checkbox">
+
+<input
+type="checkbox"
+required>
+
+<label>
+
+I hereby declare that the information provided is true.
+
+</label>
+
+</div>
+
+<button type="submit">
+
+Submit Application
+
+</button>
+
+</form>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2026 TECHINFO INTERNSHIP APPLICATION PORTAL
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
