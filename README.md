@@ -18,9 +18,6 @@ A web-based internship application portal developed using Python, Flask, HTML, C
 - MySQL
 - phpMyAdmin
 
-## 📷 Screenshots
-(Add screenshots here)
-
 ## 🚀 How to Run
 1. Clone the repository
 2. Install Flask:
